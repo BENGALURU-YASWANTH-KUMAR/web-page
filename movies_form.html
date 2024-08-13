@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Table</title>
+    <style>
+        * {
+            font-family: Verdana;
+        }
+        body {
+            background-color: aqua;
+        }
+        table, th, td {
+            border: 2px solid;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Movies Table</h1>
+    </center>
+
+    <center>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sl No</th>
+                        <th>Movie Name</th>
+                        <th>Figure/Image</th>
+                        <th>Movie Cast</th>
+                        <th>Movie Trailer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>OG</td>
+                        <td>
+                            <figure>
+                                <img src="data:image/jpeg;base64,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" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero: Pawan Kalyan<br>
+                            Heroine: Priyanka Mohan<br>
+                            Director: Sujeeth<br>
+                            Producer: D. V. V. Danayya <br>
+                            Music: Thaman
+    
+                        </td>
+                        <td>
+                            <video src="https://youtu.be/7Y5q41D8_hs" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Maharshi</td>
+                        <td>
+                            <figure>
+                                <img src="https://e1.pxfuel.com/desktop-wallpaper/881/377/desktop-wallpaper-mahesh-babu-maharshi-movie-first-look-poster-maharshi.jpg" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero: Mahesh Babu<br>
+                            Heroine: Pooja Hegde<br>
+                            Director: Vamshi Paidipally<br>
+                            Music: DSP
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Bharat Ane Nenu</td>
+                        <td>
+                            <figure>
+                                <img src="https://www.25cineframes.com/images/uploads/2018/04/Mahesh-Babu-Bharath-Ane-Nenu-Movie-ULTRA-HD-BAN-Posters.jpg" style="width: 231px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Mahesh Babu<br>
+                            Heroine : Kiara Advani<br>
+                            Director : Koratala Siva
+                        </td>
+                        <td>
+                            <video src=url(https://youtu.be/IvSoRWkaKn4) controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Dhruva</td>
+                        <td>
+                            <figure>
+                                <img src="https://www.idlebrain.com/images5/wp-19dhruvathumb.jpg" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Ram Charan<br>
+                            Heroine : Rakul Preet Singh<br>
+                            Director : Surendar Reddy
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>Sarileru Neekevvaru</td>
+                        <td>
+                            <figure>
+                                <img src="https://assets.thehansindia.com/h-upload/2019/10/07/224069-sarileru-neekevvaru.jpg?width=500&height=300" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Mahesh Babu<br>
+                            Heroine : Rashmika Mandanna<br>
+                            Director : Anil Ravipudi
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td>Nannaku Prematho</td>
+                        <td>
+                            <figure>
+                                <img src="https://e1.pxfuel.com/desktop-wallpaper/823/277/desktop-wallpaper-nannaku-prematho-great-ideas-not-so-great-film-nannaku-prematho.jpg" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Jr.NTR<br>
+                            Heroine : Rakul Preet Singh<br>
+                            Director : Sukumar
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <td>Businessman</td>
+                        <td>
+                            <figure>
+                                <img src="https://moviegalleri.net/wp-content/gallery/mahesh-babu-businessman-hd-widescreen-wallpapers/maheshbabu_businessman_wallpapers_369.jpg" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Mahesh Babu<br>
+                            Heroine : Kajal Agarwal<br>
+                            Director : Puri Jagannadh
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <td>RRR</td>
+                        <td>
+                            <figure>
+                                <img src="https://indiaglitz-media.s3.amazonaws.com/telugu/home/rrr-review-250322-1.jpg" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Jr.NTR , Ram Charan<br>
+                            Heroine : Alia Bhatt<br>
+                            Director : SSS Rajamouli
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>9</th>
+                        <td>Darling</td>
+                        <td>
+                            <figure>
+                                <img src="https://img.youtube.com/vi/zCEGt9ccF_s/mqdefault.jpg" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Prabhas<br>
+                            Heroine : Kajal Agarwal<br>
+                            Director : Aswin Raam
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>10</th>
+                        <td>DJ</td>
+                        <td>
+                            <figure>
+                                <img src="https://data1.ibtimes.co.in/en/full/636216/allu-arjuns-dj-duvvada-jagannadham-first-look-poster-released.jpg?h=450&l=50&t=40" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Allu Arjun<br>
+                            Heroine : Pooja Hegde<br>
+                            Director : Harish Shankar
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>11</th>
+                        <td>Devara</td>
+                        <td>
+                            <figure>
+                                <img src="https://images.indianexpress.com/2024/01/Jr-NTR-in-Devara-new-poster.jpg" style="width: 235px; height:185px; margin: 0;" alt="">
+                            </figure>
+                        </td>
+                        <td>
+                            Hero : Jr.NTR<br>
+                            Heroine : Janhvi Kapoor<br>
+                            Director : Koratala Siva
+                        </td>
+                        <td>
+                            <video src="https://timesofindia.indiatimes.com/videos/entertainment/regional/telugu/maharshi-official-trailer/videoshow/69139108.cms" controls autoplay width="200px" height="150px"></video>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </center>
+</body>
+</html>
+\
